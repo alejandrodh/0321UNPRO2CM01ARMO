@@ -1,0 +1,14 @@
+{
+  "name": "clase03_nodeynpm",
+  "version": "1.0.0",
+  "description": "Mi primer aplicación en NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajv",
+  "license": "ISC",
+  "dependencies": {
+    "popular-movie-quotes": "^1.2.4"
+  }
+}
