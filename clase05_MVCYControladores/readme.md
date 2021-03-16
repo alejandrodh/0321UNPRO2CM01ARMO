@@ -83,7 +83,7 @@ RECUERDEN que la funcion
 }
 ```
 
-## CONTROLADOR
+### CONTROLADOR
 logica del proceso lo manejo con los controladores.
 > en miCarpeta creo una carpeta que se llame Controllers
 > en controlllers creo un archivo recursoController.js (para el usuario voy a crear usuarioController, para los productos - productController .. etc)   
