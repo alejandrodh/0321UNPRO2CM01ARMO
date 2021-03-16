@@ -15,7 +15,9 @@
 4. Tema del día: MVC (Teoría)
 5. Tema del día: Controladores
   
-## Notas paso a paso `(by @maca)`
+## Notas paso a paso 
+`(by @maca)`  
+
 Como crear una carpeta para correr mis proyectos con express y npm . 
 1. express --view=ejs miCarpeta  // crea miCarpeta
 2. npm install // instalo las dependencias dentro de miCarpeta - para verificar que estoy parado aca, uso ls . Para moverme dentro de otra carpeta uso cd. Para volver para atras una carpeta uso cd ..
