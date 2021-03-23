@@ -6,7 +6,7 @@ const productController = {
     return res.send(autos.lista)
     },
 
-    AutosPorMarca: function(req, res){
+    autosPorMarca: function(req, res){
     let resultados = [];
         for(let i=0; i < autos.lista.length; i++){
             if(req.params.marca == autos.lista[i].marca){
@@ -21,7 +21,7 @@ const productController = {
         return res.send(resultados);
     },
 
-    AutosPorColor: function(req, res){
+    autosPorColor: function(req, res){
         let resultados = [];
         for(let i=0; i < autos.lista.length; i++){
             if(req.params.color == autos.lista[i].color){
@@ -36,7 +36,7 @@ const productController = {
         return res.send(resultados);
     },
 
-    AutosPorAnio: function(req, res){
+    autosPorAnio: function(req, res){
         let resultados = [];
         for(let i=0; i < autos.lista.length; i++){
             if(req.params.anio == autos.lista[i].anio){
