@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %> 
+<body>
+    <h1>Datos de la banda <%= banda.nombre %>.</h1>
+    <p>Cantidad de integrantes: <%= banda.integrantes %> </p>
+    <p>Género: <a href="/bandas/genre/<%= banda.genero %>"><%= banda.genero %></a></p>
+</body>
+</html>

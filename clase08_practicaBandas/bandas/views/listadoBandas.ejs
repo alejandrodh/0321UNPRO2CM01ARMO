@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+    <h1>Listado de<%= title %></h1>
+    <% for(let i= 0; i<bandas.length; i++) {%>
+        <article>
+            <h2><%= bandas[i].nombre %> </h2>
+            <p>Integrantes: <%=bandas[i].integrantes %></p>
+            <p>Genero: <a href="/bandas/genre/<%= bandas[i].genero%>"><%= bandas[i].genero%></a></p>
+            <p>Top Canciones:</p>
+            <ul>
+                <!-- Todo: final de la clase     -->
+
+            </ul>
+            <iframe width="560" height="315" src='<%= bandas[i].video %>' title="YouTube video player"
+                frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            
+        </article>
+
+    <% } %> 
+
+</body>
+</html>
