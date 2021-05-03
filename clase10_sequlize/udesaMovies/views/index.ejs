@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UdeSA Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>UdeSA Movies</h1>
+    <p>Welcome to UdeSA Movies</p>
+
+    <ul>
+      <% for(let i=0; i<movies.length; i++){ %>
+        <li>
+          <a href="/movies/id/<%= movies[i].id%>"><%= movies[i].title %></a> 
+        </li>
+      <% } %> 
+    </ul>
+  </body>
+</html>
