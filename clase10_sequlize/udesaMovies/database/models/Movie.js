@@ -6,7 +6,7 @@ module.exports = function(sequelize, dataTypes){
     //Describir la configuración de las columnas de la tabla
     let cols = {
         id:{
-            autoincrement: true,
+            autoIncrement: true,
             primaryKey: true,
             type: dataTypes.INTEGER,
         },
