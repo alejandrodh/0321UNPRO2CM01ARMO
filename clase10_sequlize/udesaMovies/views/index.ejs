@@ -7,11 +7,12 @@
   <body>
     <h1>UdeSA Movies</h1>
     <p>Welcome to UdeSA Movies</p>
-
+    <a href="/movies/new">Estrenos</a>
+    <a href="/movies/recomended">Recomendadas</a>
     <ul>
       <% for(let i=0; i<movies.length; i++){ %>
         <li>
-          <a href="/movies/id/<%= movies[i].id%>"><%= movies[i].title %></a> 
+          <a href="/movies/detail/<%= movies[i].id%>"><%= movies[i].title %></a> 
         </li>
       <% } %> 
     </ul>
