@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UdeSA Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>UdeSA Movies</h1>
+    <p>Welcome to UdeSA Movies</p>
+    <a href="/movies/new">Estrenos</a>
+    <a href="/movies/recomended">Recomendadas</a>
+    <a href="/movies/create">Nueva Película</a>
+    <h2>Buscar películas</h2>
+    <form action="/movies/search" method="GET">
+      <input type="text" name="search" value="" placeholder="Buscar...">
+      <button type="submit">Buscar</button>
+    </form>
+    <ul>
+      <% for(let i=0; i<movies.length; i++){ %>
+        <li>
+          <a href="/movies/detail/<%= movies[i].id%>"><%= movies[i].title %></a> 
+        </li>
+      <% } %> 
+    </ul>
+  </body>
+</html>
