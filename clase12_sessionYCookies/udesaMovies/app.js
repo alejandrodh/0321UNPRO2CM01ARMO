@@ -31,9 +31,12 @@ app.use(session(
 
 // Antes de las rutas. Dejar disponible datos de sessión para todas las vistas
 app.use(function(req, res, next){
+  console.log('En session middleware');
+  console.log(req.session.user);
   if(req.session.user != undefined){
     res.locals = req.session.user;
-    console.log("entre en locals: " + res.locals);
+    console.log("entre en locals: ");
+    console.log(res.locals);
     return next();
   } 
   return next(); //Clave para que el proceso siga adelante.  
@@ -47,8 +50,11 @@ app.use(function(req, res, next){
     
     db.User.findByPk(idDeLaCookie)
     .then( user => {
-      req.session.user = user;
-      res.locals = user.dataValues;
+      console.log('en cookie middleware trasladando');
+      req.session.user = user; //Estamos poniendo en session a toda la instancia del modelo. Debería ser solo user.dataValues.
+      console.log('en cookie middleware');
+      console.log(req.session.user);
+      res.locals = user; //Se corrije si usamos user.dataValues
       return next();
     })
     .catch( e => {console.log(e)})
@@ -58,7 +64,6 @@ app.use(function(req, res, next){
   }
 
 })
-
 
 
 app.use('/', indexRouter);
