@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Registarte</H1>
+    <a href="/">Home</a>
+    <a href="/login">Ingresar</a>
+
+    <% if(locals.errors){ %>
+        <p style="color:red">
+            <%= locals.errors.message %>
+        </p>
+        <% } %>
+
+    <form action="/register" method="POST">
+        <div>
+            <input type="text" name="name" placeholder="nombre" value="">
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="email" value="">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="contraseña" value="">
+        </div>
+        <div>
+            <input type="password" name="retypePassword" placeholder="repetir contraseña" value="">
+        </div>
+        <button type="submit">Registrarme</button>
+    </form>
+</body>
+</html>
