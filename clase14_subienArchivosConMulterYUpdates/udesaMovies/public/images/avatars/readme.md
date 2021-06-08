@@ -1,0 +1,1 @@
+Acá van las fotos de perfil de los usuarios subidas con Multer.
