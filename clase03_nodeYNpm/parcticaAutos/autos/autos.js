@@ -19,10 +19,10 @@ let autos = {
             }
     },
     ],
-    describirse : function(){
-        //Pueden hacer un método genérico para recorrer el arrya y describir a cada auto.
-        //Tu código acá
-    },
+    // describirse : function(){
+    //     //Pueden hacer un método genérico para recorrer el arrya y describir a cada auto.
+    //     //Tu código acá
+    // },
     porColor: function(color){
         //....
         //Tu código acá.

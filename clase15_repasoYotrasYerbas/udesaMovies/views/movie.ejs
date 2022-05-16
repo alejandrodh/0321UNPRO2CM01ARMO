@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UdeSA Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>UdeSA Movies</h1>
+    <p>Datos de la película <%= movie.title %> </p>
+    <a href="/">Home</a>
+    
+    <p>Rating: <%= movie.rating %> </p>
+    <p>Duración: <%= movie.length %> </p>
+    <p>Género: <%= movie.genre.name  %> </p>
+
+    <form action="/movies/delete/<%= movie.id %>" method="POST">
+      <button type="submit">Borrar</button>
+    </form>
+    <button> Modificar </button>
+
+    <h2>Actores</h2>
+    <ul>
+      <% for(let i=0; i<movie.actors.length; i++){ %>
+        <li><%= movie.actors[i].first_name + ", " +movie.actors[i].last_name %> </li>
+      <% } %> 
+    </ul>
+    <h2>Comentarios de usuarios</h2>
+    <ul>
+      <% for(let i=0; i<movie.comments.length; i++){ %>
+        <li>
+          <span><%= movie.comments[i].user.name %>: </span>
+          <%= movie.comments[i].comment%>
+        </li>
+        <% } %>
+    </ul>
+  </body>
+</html>

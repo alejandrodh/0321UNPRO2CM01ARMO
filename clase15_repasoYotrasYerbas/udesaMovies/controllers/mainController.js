@@ -10,7 +10,6 @@ const mainController = {
             })
             .catch(error =>{
                 console.log(error);
-                return res.send(error);
             })
     }   
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UdeSA Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>UdeSA Movies</h1>
+    <p>Welcome to UdeSA Movies</p>
+    <a href="/movies/new">Estrenos</a>
+    <a href="/movies/recomended">Recomendadas</a>
+    <h2>Nueva Película</h2>
+    <form action="/movies/store" method="POST">
+      <div>
+        <input type="text" name="title" value="" placeholder="title">
+      </div>
+      <div>
+        <input type="number" name="rating" value="" placeholder="rating">
+      </div>
+      <div>
+        <input type="number" name="awards" value="" placeholder="awards">
+      </div>
+      <div>
+        <input type="date" name="release_date" value="" placeholder="release date">
+      </div>
+      <div>
+        <input type="number" name="length" value="" placeholder="length">
+      </div>
+      <div>
+        <label>Género</label>
+        <select name="genre_id">
+          <% for(let i=0; i<genres.length; i++){ %>
+          <option value="<%=genres[i].id%>"><%=genres[i].name%></option>
+          <% } %>  
+        </select>
+      </div>
+      <button type="submit">Guardar</button>
+    </form>
+  </body>
+</html>
